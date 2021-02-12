@@ -24,7 +24,7 @@ class DataReader(object):
     def ReadData(self):
         train_file = Path(self.train_file_name)
         if train_file.exists():
-            data = np.loadtxt(self.train_file_name,delimiter=",",skiprows=1)#np.load(self.train_file_name)
+            data = np.loadtxt(self.train_file_name,delimiter=",",skiprows=1)
             self.XRaw=data[:,0:2]
             self.YRaw=data[:,2:]
             self.num_train=self.XRaw.shape[0]
